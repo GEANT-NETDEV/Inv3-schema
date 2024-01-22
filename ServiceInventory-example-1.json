@@ -1,0 +1,61 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Service Inventory Management",
+    "description": "A simple service schema sample"
+  },
+  "definitions": {
+
+    "Service": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the service"
+        },
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "note": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Note"
+          },
+          "description": "A list of notes made on this service"
+        }
+      }
+    },
+    "Note": {
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "author": {
+          "type": "string",
+          "description": "Author of the note"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date of the note"
+        },
+        "text": {
+          "type": "string",
+          "description": "Text of the note"
+        }
+      }
+    }
+
+  }
+}
