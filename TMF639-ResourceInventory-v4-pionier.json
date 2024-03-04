@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "definitions": {
-    "$comment": " ----------------- section with the definitions which extend TMF639-ResourceInventory-v4.0.0 schema -----------------",
+    "$comment": " ----------------- test section with the definitions which extend TMF639-ResourceInventory-v4.0.0 schema -----------------",
     "publicIdentifier": {
       "type": "object",
       "description": "",
@@ -367,6 +367,11 @@
           "format": "date-time",
           "description": "A date time( DateTime). The date from which the resource is operating"
         },
+        "lastUpdateDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A date time( DateTime). The date when the resource was updated last time"
+        },
         "versionNumber": {
           "type": "string",
           "description": "This is a string that identifies the version of this physical resource. This is an optional attribute."
@@ -455,8 +460,6 @@
         }
       }
     },
-
-
 
 
     "PolicyCategoryCharacteristic": {
@@ -1082,6 +1085,11 @@
           "format": "date-time",
           "description": "A date time( DateTime). The date from which the resource is operating"
         },
+        "lastUpdateDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A date time( DateTime). The date when the resource was updated last time"
+        },
         "value": {
           "type": "string",
           "description": "the value of the logical resource. E.g '0746712345' for  MSISDN's"
@@ -1419,6 +1427,11 @@
           "type": "string",
           "format": "date-time",
           "description": "A date time( DateTime). The date from which the resource is operating"
+        },
+        "lastUpdateDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A date time( DateTime). The date when the resource was updated last time"
         },
         "activationFeature": {
           "type": "array",
